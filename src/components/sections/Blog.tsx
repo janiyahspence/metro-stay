@@ -114,7 +114,7 @@ export const Blog: React.FC = () => {
       excerpt: 'How to leverage hotel environments for effective business networking and relationship building.',
       content: 'Hotels provide unique opportunities for business networking, from lobby conversations to formal events...',
       author: 'Priya Sharma',
-      author: 'Aisha D'Souza',
+      author: 'Aisha D\'Souza',
       date: '2025-01-03',
       category: 'business-travel',
       readTime: '5 min read',
