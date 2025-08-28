@@ -32,7 +32,7 @@ export const Testimonials: React.FC = () => {
   const testimonials: Testimonial[] = [
     {
       id: 'test-1',
-      name: 'Arjun Mehta',
+      name: 'Aarav Mehta',
       position: 'CEO',
       company: 'TechVision Solutions',
       rating: 5,
@@ -46,7 +46,7 @@ export const Testimonials: React.FC = () => {
     },
     {
       id: 'test-2',
-      name: 'Priya Sharma',
+      name: 'Diya Nair',
       position: 'VP Marketing',
       company: 'Global Dynamics',
       rating: 5,
@@ -60,7 +60,7 @@ export const Testimonials: React.FC = () => {
     },
     {
       id: 'test-3',
-      name: 'Rajesh Kumar',
+      name: 'Ishaan Kapoor',
       position: 'Director',
       company: 'Pinnacle Consulting',
       rating: 5,
@@ -74,7 +74,7 @@ export const Testimonials: React.FC = () => {
     },
     {
       id: 'test-4',
-      name: 'Sneha Patel',
+      name: 'Rhea Sharma',
       position: 'Regional Manager',
       company: 'InnovateCorp',
       rating: 5,
@@ -88,7 +88,7 @@ export const Testimonials: React.FC = () => {
     },
     {
       id: 'test-5',
-      name: 'Vikram Singh',
+      name: 'Vivaan Reddy',
       position: 'CFO',
       company: 'FinanceFirst Ltd',
       rating: 4,
@@ -102,7 +102,7 @@ export const Testimonials: React.FC = () => {
     },
     {
       id: 'test-6',
-      name: 'Anita Desai',
+      name: 'Anaya Malhotra',
       position: 'HR Director',
       company: 'PeopleFirst Solutions',
       rating: 5,
@@ -116,7 +116,7 @@ export const Testimonials: React.FC = () => {
     },
     {
       id: 'test-7',
-      name: 'Rohit Agarwal',
+      name: 'Arjun Desai',
       position: 'Sales Director',
       company: 'MarketLeaders Inc',
       rating: 5,
@@ -130,7 +130,7 @@ export const Testimonials: React.FC = () => {
     },
     {
       id: 'test-8',
-      name: 'Kavya Reddy',
+      name: 'Tara Iyer',
       position: 'Operations Manager',
       company: 'LogiFlow Systems',
       rating: 4,
@@ -144,7 +144,7 @@ export const Testimonials: React.FC = () => {
     },
     {
       id: 'test-9',
-      name: 'Amit Joshi',
+      name: 'Krish Bansal',
       position: 'Project Manager',
       company: 'BuildTech Solutions',
       rating: 5,
@@ -158,7 +158,7 @@ export const Testimonials: React.FC = () => {
     },
     {
       id: 'test-10',
-      name: 'Deepika Malhotra',
+      name: 'Myra Joshi',
       position: 'Business Development Head',
       company: 'GrowthPartners',
       rating: 5,
@@ -172,7 +172,7 @@ export const Testimonials: React.FC = () => {
     },
     {
       id: 'test-11',
-      name: 'Suresh Nair',
+      name: 'Advait Menon',
       position: 'General Manager',
       company: 'ServiceExcellence Ltd',
       rating: 4,
@@ -186,7 +186,7 @@ export const Testimonials: React.FC = () => {
     },
     {
       id: 'test-12',
-      name: 'Meera Gupta',
+      name: 'Kiara Sethi',
       position: 'Training Manager',
       company: 'SkillDevelopment Corp',
       rating: 5,
@@ -200,7 +200,7 @@ export const Testimonials: React.FC = () => {
     },
     {
       id: 'test-13',
-      name: 'Karan Malhotra',
+      name: 'Reyansh Gupta',
       position: 'IT Director',
       company: 'TechSolutions Pro',
       rating: 5,
@@ -214,7 +214,7 @@ export const Testimonials: React.FC = () => {
     },
     {
       id: 'test-14',
-      name: 'Ritu Sharma',
+      name: 'Aanya Rao',
       position: 'Event Manager',
       company: 'EventCrafters',
       rating: 5,
@@ -228,7 +228,7 @@ export const Testimonials: React.FC = () => {
     },
     {
       id: 'test-15',
-      name: 'Arun Krishnan',
+      name: 'Siddharth Verma',
       position: 'Consultant',
       company: 'Strategic Advisors',
       rating: 4,

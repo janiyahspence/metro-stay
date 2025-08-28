@@ -48,21 +48,21 @@ export const About: React.FC = () => {
 
   const leadership = [
     {
-      name: 'Rajesh Kumar',
+      name: 'Neil Choudhary',
       position: 'General Manager',
       experience: '15+ years in luxury hospitality',
       image: 'https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=400',
       specialization: 'Corporate Relations & Strategic Planning'
     },
     {
-      name: 'Priya Sharma',
+      name: 'Meera Patil',
       position: 'Director of Operations',
       experience: '12+ years in hotel operations',
       image: 'https://images.pexels.com/photos/3756679/pexels-photo-3756679.jpeg?auto=compress&cs=tinysrgb&w=400',
       specialization: 'Service Excellence & Guest Experience'
     },
     {
-      name: 'Amit Patel',
+      name: 'Rohan Bhattacharya',
       position: 'Head of Business Development',
       experience: '10+ years in corporate sales',
       image: 'https://images.pexels.com/photos/3785077/pexels-photo-3785077.jpeg?auto=compress&cs=tinysrgb&w=400',
