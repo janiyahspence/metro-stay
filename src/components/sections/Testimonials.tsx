@@ -40,7 +40,7 @@ export const Testimonials: React.FC = () => {
       date: '2025-01-10',
       category: 'business',
       verified: true,
-      image: 'https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=400',
+      image: 'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400',
       stayDuration: '3 nights',
       roomType: 'Executive Suite'
     },
@@ -54,7 +54,7 @@ export const Testimonials: React.FC = () => {
       date: '2025-01-08',
       category: 'business',
       verified: true,
-      image: 'https://images.pexels.com/photos/3756679/pexels-photo-3756679.jpeg?auto=compress&cs=tinysrgb&w=400',
+      image: 'https://images.pexels.com/photos/3785077/pexels-photo-3785077.jpeg?auto=compress&cs=tinysrgb&w=400',
       stayDuration: '2 nights',
       roomType: 'Business Room'
     },
@@ -68,7 +68,7 @@ export const Testimonials: React.FC = () => {
       date: '2025-01-05',
       category: 'corporate',
       verified: true,
-      image: 'https://images.pexels.com/photos/3785077/pexels-photo-3785077.jpeg?auto=compress&cs=tinysrgb&w=400',
+      image: 'https://images.pexels.com/photos/1040880/pexels-photo-1040880.jpeg?auto=compress&cs=tinysrgb&w=400',
       stayDuration: '2 days event',
       roomType: 'Conference Suite'
     },
@@ -82,7 +82,7 @@ export const Testimonials: React.FC = () => {
       date: '2025-01-03',
       category: 'meetings',
       verified: true,
-      image: 'https://images.pexels.com/photos/3756679/pexels-photo-3756679.jpeg?auto=compress&cs=tinysrgb&w=400',
+      image: 'https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=400',
       stayDuration: '1 day',
       roomType: 'Business Room'
     },
@@ -96,7 +96,7 @@ export const Testimonials: React.FC = () => {
       date: '2024-12-28',
       category: 'business',
       verified: true,
-      image: 'https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=400',
+      image: 'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=400',
       stayDuration: '5 nights',
       roomType: 'Executive Suite'
     },
@@ -110,7 +110,7 @@ export const Testimonials: React.FC = () => {
       date: '2024-12-25',
       category: 'corporate',
       verified: true,
-      image: 'https://images.pexels.com/photos/3756679/pexels-photo-3756679.jpeg?auto=compress&cs=tinysrgb&w=400',
+      image: 'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=400',
       stayDuration: '3 days',
       roomType: 'Executive Suite'
     },
@@ -124,7 +124,7 @@ export const Testimonials: React.FC = () => {
       date: '2024-12-22',
       category: 'meetings',
       verified: true,
-      image: 'https://images.pexels.com/photos/3785077/pexels-photo-3785077.jpeg?auto=compress&cs=tinysrgb&w=400',
+      image: 'https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=400',
       stayDuration: '2 nights',
       roomType: 'Conference Suite'
     },
@@ -138,7 +138,7 @@ export const Testimonials: React.FC = () => {
       date: '2024-12-20',
       category: 'business',
       verified: true,
-      image: 'https://images.pexels.com/photos/3756679/pexels-photo-3756679.jpeg?auto=compress&cs=tinysrgb&w=400',
+      image: 'https://images.pexels.com/photos/1181424/pexels-photo-1181424.jpeg?auto=compress&cs=tinysrgb&w=400',
       stayDuration: '2 nights',
       roomType: 'Business Room'
     },
@@ -152,7 +152,7 @@ export const Testimonials: React.FC = () => {
       date: '2024-12-18',
       category: 'meetings',
       verified: true,
-      image: 'https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=400',
+      image: 'https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?auto=compress&cs=tinysrgb&w=400',
       stayDuration: '1 day',
       roomType: 'Business Room'
     },
@@ -166,7 +166,7 @@ export const Testimonials: React.FC = () => {
       date: '2024-12-15',
       category: 'corporate',
       verified: true,
-      image: 'https://images.pexels.com/photos/3756679/pexels-photo-3756679.jpeg?auto=compress&cs=tinysrgb&w=400',
+      image: 'https://images.pexels.com/photos/1181519/pexels-photo-1181519.jpeg?auto=compress&cs=tinysrgb&w=400',
       stayDuration: '1 night',
       roomType: 'Conference Suite'
     },
@@ -180,7 +180,7 @@ export const Testimonials: React.FC = () => {
       date: '2024-12-12',
       category: 'business',
       verified: true,
-      image: 'https://images.pexels.com/photos/3785077/pexels-photo-3785077.jpeg?auto=compress&cs=tinysrgb&w=400',
+      image: 'https://images.pexels.com/photos/1212984/pexels-photo-1212984.jpeg?auto=compress&cs=tinysrgb&w=400',
       stayDuration: '4 nights',
       roomType: 'Executive Suite'
     },
@@ -194,7 +194,7 @@ export const Testimonials: React.FC = () => {
       date: '2024-12-10',
       category: 'corporate',
       verified: true,
-      image: 'https://images.pexels.com/photos/3756679/pexels-photo-3756679.jpeg?auto=compress&cs=tinysrgb&w=400',
+      image: 'https://images.pexels.com/photos/1181562/pexels-photo-1181562.jpeg?auto=compress&cs=tinysrgb&w=400',
       stayDuration: '2 days',
       roomType: 'Business Room'
     },
@@ -208,7 +208,7 @@ export const Testimonials: React.FC = () => {
       date: '2024-12-08',
       category: 'business',
       verified: true,
-      image: 'https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=400',
+      image: 'https://images.pexels.com/photos/1040881/pexels-photo-1040881.jpeg?auto=compress&cs=tinysrgb&w=400',
       stayDuration: '3 nights',
       roomType: 'Executive Suite'
     },
@@ -222,7 +222,7 @@ export const Testimonials: React.FC = () => {
       date: '2024-12-05',
       category: 'corporate',
       verified: true,
-      image: 'https://images.pexels.com/photos/3756679/pexels-photo-3756679.jpeg?auto=compress&cs=tinysrgb&w=400',
+      image: 'https://images.pexels.com/photos/1181690/pexels-photo-1181690.jpeg?auto=compress&cs=tinysrgb&w=400',
       stayDuration: '1 day',
       roomType: 'Conference Suite'
     },
@@ -236,7 +236,7 @@ export const Testimonials: React.FC = () => {
       date: '2024-12-03',
       category: 'business',
       verified: true,
-      image: 'https://images.pexels.com/photos/3785077/pexels-photo-3785077.jpeg?auto=compress&cs=tinysrgb&w=400',
+      image: 'https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg?auto=compress&cs=tinysrgb&w=400',
       stayDuration: '1 night',
       roomType: 'Business Room'
     }
