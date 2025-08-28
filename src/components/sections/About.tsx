@@ -51,21 +51,21 @@ export const About: React.FC = () => {
       name: 'Neil Choudhary',
       position: 'General Manager',
       experience: '15+ years in luxury hospitality',
-      image: 'https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=400',
+      image: 'https://images.pexels.com/photos/1040880/pexels-photo-1040880.jpeg?auto=compress&cs=tinysrgb&w=400',
       specialization: 'Corporate Relations & Strategic Planning'
     },
     {
       name: 'Meera Patil',
       position: 'Director of Operations',
       experience: '12+ years in hotel operations',
-      image: 'https://images.pexels.com/photos/3756679/pexels-photo-3756679.jpeg?auto=compress&cs=tinysrgb&w=400',
+      image: 'https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=400',
       specialization: 'Service Excellence & Guest Experience'
     },
     {
       name: 'Rohan Bhattacharya',
       position: 'Head of Business Development',
       experience: '10+ years in corporate sales',
-      image: 'https://images.pexels.com/photos/3785077/pexels-photo-3785077.jpeg?auto=compress&cs=tinysrgb&w=400',
+      image: 'https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?auto=compress&cs=tinysrgb&w=400',
       specialization: 'Corporate Partnerships & Events'
     }
   ];
