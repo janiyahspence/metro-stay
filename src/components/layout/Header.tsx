@@ -32,7 +32,7 @@ export const Header: React.FC = () => {
   return (
     <>
     <SkipLink />
-    <header className="bg-white shadow-sm sticky top-0 z-40">
+    <header className="bg-white shadow-sm sticky top-0 z-50">
       {/* Top Bar */}
       <div className="bg-slate-900 text-white py-2">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -84,8 +84,8 @@ export const Header: React.FC = () => {
 
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center space-x-4">
-            <Button 
-              variant="ghost" 
+            <Button
+              variant="ghost"
               size="sm"
               onClick={() => setIsLoyaltyModalOpen(true)}
             >
@@ -105,8 +105,8 @@ export const Header: React.FC = () => {
             >
               Book Now
             </Button>
-            <Button 
-              variant="ghost" 
+            <Button
+              variant="ghost"
               size="sm"
               onClick={() => setIsContactModalOpen(true)}
             >
@@ -142,9 +142,9 @@ export const Header: React.FC = () => {
               </a>
             ))}
             <div className="pt-4 space-y-3">
-              <Button 
-                variant="ghost" 
-                size="sm" 
+              <Button
+                variant="ghost"
+                size="sm"
                 className="w-full"
                 onClick={() => {
                   setIsLoyaltyModalOpen(true);
@@ -175,9 +175,9 @@ export const Header: React.FC = () => {
               >
                 Book Now
               </Button>
-              <Button 
-                variant="ghost" 
-                size="sm" 
+              <Button
+                variant="ghost"
+                size="sm"
                 className="w-full"
                 onClick={() => {
                   setIsContactModalOpen(true);
