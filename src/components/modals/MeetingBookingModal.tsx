@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Calendar, Users, Clock, Building2, Mail, Phone, User } from 'lucide-react';
 import { Modal } from '../ui/Modal';
 import { Button } from '../ui/Button';
+import { formatMeetingBookingMessage, openWhatsApp, generateBookingReference } from '../../utils/whatsapp';
 
 interface MeetingRoom {
   id: string;
@@ -43,9 +44,10 @@ export const MeetingBookingModal: React.FC<MeetingBookingModalProps> = ({
   rooms 
 }) => {
   const [currentStep, setCurrentStep] = useState(1);
+  const today = new Date().toISOString().split('T')[0];
   const [formData, setFormData] = useState({
     roomId: preselectedRoom || '',
-    eventDate: new Date().toISOString().split('T')[0],
+    eventDate: today,
     startTime: '09:00',
     endTime: '17:00',
     duration: 'full-day',
@@ -123,8 +125,24 @@ export const MeetingBookingModal: React.FC<MeetingBookingModalProps> = ({
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulate booking submission
-    alert('Meeting room booking request submitted successfully! Our events team will contact you within 2 hours to confirm details.');
+
+    const selectedRoom = rooms.find(room => room.id === formData.roomId);
+    if (!selectedRoom) return;
+
+    const bookingRef = generateBookingReference();
+    const totalCost = calculateTotal();
+
+    const message = formatMeetingBookingMessage(
+      {
+        ...formData,
+        roomName: selectedRoom.name,
+        totalCost
+      },
+      bookingRef
+    );
+
+    openWhatsApp(message);
+
     onClose();
     setCurrentStep(1);
   };
@@ -168,12 +186,12 @@ export const MeetingBookingModal: React.FC<MeetingBookingModalProps> = ({
       <div className="grid grid-cols-2 gap-4">
         <div>
           <label className="block text-sm font-medium text-slate-700 mb-2">Event Date</label>
-          <input 
-            type="date" 
+          <input
+            type="date"
             value={formData.eventDate}
             onChange={(e) => handleInputChange('eventDate', e.target.value)}
+            min={today}
             className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-gold-500 focus:border-gold-500"
-            min={new Date().toISOString().split('T')[0]}
           />
         </div>
         <div>

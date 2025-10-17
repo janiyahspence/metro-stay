@@ -8,6 +8,8 @@ import { NewsletterModal } from '../modals/NewsletterModal';
 export const Hero: React.FC = () => {
   const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
   const [isNewsletterModalOpen, setIsNewsletterModalOpen] = useState(false);
+  const today = new Date().toISOString().split('T')[0];
+  const tomorrow = new Date(Date.now() + 86400000).toISOString().split('T')[0];
 
   return (
     <section id="home" className="relative min-h-screen flex items-center" role="banner">
@@ -98,24 +100,26 @@ export const Hero: React.FC = () => {
                 <div className="grid grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-slate-700 mb-2">Check-in</label>
-                    <input 
-                      type="date" 
+                    <input
+                      type="date"
                       id="checkin-date"
                       name="checkin"
                       aria-label="Check-in date"
+                      min={today}
                       className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-gold-500 focus:border-gold-500"
-                      defaultValue={new Date().toISOString().split('T')[0]}
+                      defaultValue={today}
                     />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-slate-700 mb-2">Check-out</label>
-                    <input 
-                      type="date" 
+                    <input
+                      type="date"
                       id="checkout-date"
                       name="checkout"
                       aria-label="Check-out date"
+                      min={tomorrow}
                       className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-gold-500 focus:border-gold-500"
-                      defaultValue={new Date(Date.now() + 86400000).toISOString().split('T')[0]}
+                      defaultValue={tomorrow}
                     />
                   </div>
                 </div>

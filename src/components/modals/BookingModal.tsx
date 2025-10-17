@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Calendar, Users, CreditCard, User, Mail, Phone, CheckCircle, Star, Gift } from 'lucide-react';
 import { Modal } from '../ui/Modal';
 import { Button } from '../ui/Button';
+import { formatRoomBookingMessage, openWhatsApp, generateBookingReference } from '../../utils/whatsapp';
 
 interface BookingModalProps {
   isOpen: boolean;
@@ -12,9 +13,11 @@ interface BookingModalProps {
 export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose, preselectedRoom }) => {
   const [currentStep, setCurrentStep] = useState(1);
   const [showConfirmation, setShowConfirmation] = useState(false);
+  const today = new Date().toISOString().split('T')[0];
+  const tomorrow = new Date(Date.now() + 86400000).toISOString().split('T')[0];
   const [formData, setFormData] = useState({
-    checkIn: new Date().toISOString().split('T')[0],
-    checkOut: new Date(Date.now() + 86400000).toISOString().split('T')[0],
+    checkIn: today,
+    checkOut: tomorrow,
     guests: '1',
     rooms: '1',
     roomType: 'business',
@@ -45,12 +48,51 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose, pre
   ];
 
   const handleInputChange = (field: string, value: string | boolean) => {
+    if (field === 'checkIn') {
+      const checkInDate = new Date(value as string);
+      const checkOutDate = new Date(formData.checkOut);
+      if (checkOutDate <= checkInDate) {
+        const newCheckOut = new Date(checkInDate);
+        newCheckOut.setDate(newCheckOut.getDate() + 1);
+        setFormData(prev => ({
+          ...prev,
+          checkIn: value as string,
+          checkOut: newCheckOut.toISOString().split('T')[0]
+        }));
+        return;
+      }
+    }
     setFormData(prev => ({ ...prev, [field]: value }));
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setShowConfirmation(true);
+
+    const bookingRef = generateBookingReference();
+    const message = formatRoomBookingMessage(formData, bookingRef);
+
+    openWhatsApp(message);
+
+    onClose();
+    setCurrentStep(1);
+    setFormData({
+      checkIn: today,
+      checkOut: tomorrow,
+      guests: '1',
+      rooms: '1',
+      roomType: 'business',
+      firstName: '',
+      lastName: '',
+      email: '',
+      phone: '',
+      company: '',
+      specialRequests: '',
+      loyaltyMember: false,
+      loyaltyNumber: '',
+      newsletter: false,
+      marketingConsent: false,
+      specialOffers: false
+    });
   };
 
   const handleConfirmationClose = () => {
@@ -83,19 +125,21 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose, pre
       <div className="grid grid-cols-2 gap-4">
         <div>
           <label className="block text-sm font-medium text-slate-700 mb-2">Check-in Date</label>
-          <input 
-            type="date" 
+          <input
+            type="date"
             value={formData.checkIn}
             onChange={(e) => handleInputChange('checkIn', e.target.value)}
+            min={today}
             className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-gold-500 focus:border-gold-500"
           />
         </div>
         <div>
           <label className="block text-sm font-medium text-slate-700 mb-2">Check-out Date</label>
-          <input 
-            type="date" 
+          <input
+            type="date"
             value={formData.checkOut}
             onChange={(e) => handleInputChange('checkOut', e.target.value)}
+            min={formData.checkIn || today}
             className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-gold-500 focus:border-gold-500"
           />
         </div>
