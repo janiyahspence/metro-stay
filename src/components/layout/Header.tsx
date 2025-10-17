@@ -5,12 +5,16 @@ import { SkipLink } from '../ui/SkipLink';
 import { LoyaltySignupModal } from '../modals/LoyaltySignupModal';
 import { NewsletterModal } from '../modals/NewsletterModal';
 import { ContactModal } from '../modals/ContactModal';
+import { BookingModal } from '../modals/BookingModal';
+import { RateInquiryModal } from '../modals/RateInquiryModal';
 
 export const Header: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isLoyaltyModalOpen, setIsLoyaltyModalOpen] = useState(false);
   const [isNewsletterModalOpen, setIsNewsletterModalOpen] = useState(false);
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+  const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
+  const [isRateInquiryModalOpen, setIsRateInquiryModalOpen] = useState(false);
 
   const navItems = [
     { name: 'Home', href: '#home' },
@@ -87,10 +91,18 @@ export const Header: React.FC = () => {
             >
               Join Elite
             </Button>
-            <Button variant="outline" size="sm">
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => setIsRateInquiryModalOpen(true)}
+            >
               Check Rates
             </Button>
-            <Button variant="primary" size="sm">
+            <Button
+              variant="primary"
+              size="sm"
+              onClick={() => setIsBookingModalOpen(true)}
+            >
               Book Now
             </Button>
             <Button 
@@ -141,10 +153,26 @@ export const Header: React.FC = () => {
               >
                 Join Elite
               </Button>
-              <Button variant="outline" size="sm" className="w-full">
+              <Button
+                variant="outline"
+                size="sm"
+                className="w-full"
+                onClick={() => {
+                  setIsRateInquiryModalOpen(true);
+                  setIsMobileMenuOpen(false);
+                }}
+              >
                 Check Rates
               </Button>
-              <Button variant="primary" size="sm" className="w-full">
+              <Button
+                variant="primary"
+                size="sm"
+                className="w-full"
+                onClick={() => {
+                  setIsBookingModalOpen(true);
+                  setIsMobileMenuOpen(false);
+                }}
+              >
                 Book Now
               </Button>
               <Button 
@@ -175,9 +203,19 @@ export const Header: React.FC = () => {
       onClose={() => setIsNewsletterModalOpen(false)}
     />
     
-    <ContactModal 
+    <ContactModal
       isOpen={isContactModalOpen}
       onClose={() => setIsContactModalOpen(false)}
+    />
+
+    <BookingModal
+      isOpen={isBookingModalOpen}
+      onClose={() => setIsBookingModalOpen(false)}
+    />
+
+    <RateInquiryModal
+      isOpen={isRateInquiryModalOpen}
+      onClose={() => setIsRateInquiryModalOpen(false)}
     />
     </>
   );

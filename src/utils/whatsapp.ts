@@ -161,3 +161,41 @@ export const openWhatsApp = (message: string): void => {
 export const generateBookingReference = (): string => {
   return `MS-${Date.now().toString().slice(-6)}`;
 };
+
+export interface RateInquiryData {
+  checkIn: string;
+  checkOut: string;
+  guests: string;
+  rooms: string;
+  roomType: string;
+  name: string;
+  email: string;
+  phone: string;
+}
+
+export const formatRateInquiryMessage = (data: RateInquiryData, bookingRef: string): string => {
+  const roomTypeNames: { [key: string]: string } = {
+    business: 'Business Room',
+    executive: 'Executive Suite',
+    conference: 'Conference Suite',
+    any: 'Any Available Room'
+  };
+
+  let message = `🏨 *METRO STAY - RATE INQUIRY*\n\n`;
+  message += `📋 *Inquiry Reference:* ${bookingRef}\n\n`;
+  message += `📅 *Stay Details:*\n`;
+  message += `• Check-in: ${data.checkIn}\n`;
+  message += `• Check-out: ${data.checkOut}\n`;
+  message += `• Room Type: ${roomTypeNames[data.roomType] || data.roomType}\n`;
+  message += `• Number of Rooms: ${data.rooms}\n`;
+  message += `• Number of Guests: ${data.guests}\n\n`;
+
+  message += `👤 *Contact Information:*\n`;
+  message += `• Name: ${data.name}\n`;
+  message += `• Email: ${data.email}\n`;
+  message += `• Phone: ${data.phone}\n\n`;
+
+  message += `✅ Please send me a rate quote for the above dates and room requirements.`;
+
+  return message;
+};
